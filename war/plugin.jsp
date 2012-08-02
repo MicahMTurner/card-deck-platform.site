@@ -17,6 +17,27 @@
 <script type="text/javascript" src="style/js/jquery-1.5.min.js"></script>
 <script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
 <script type="text/javascript" src="style/js/scripts.js"></script>
+<script type="text/javascript">
+	$(document).ready(
+			function() { // When the HTML DOM is ready loading, then execute the following function...
+				//$('#somebutton').click(function() {                        // Locate HTML DOM element with ID "somebutton" and assign the following function to its "click" event...
+				$.get('cardeckplatform_details', function(responseJson) { // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
+					var $table = $('<table></table>').appendTo($('#tab1')); // Create HTML <table> element and append it to HTML DOM element with ID "somediv".
+					$('<tr>').appendTo($table) // Create HTML <tr> element, set its text content with currently iterated item and append it to the <ul>.
+					.append($('<td>').text('Name:')) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
+					.append($('<td>').text('Link :')).append(
+							$('<td>').text('Date :'));
+					$.each(responseJson, function(index, product) { // Iterate over the JSON array.
+						$('<tr>').appendTo($table) // Create HTML <tr> element, set its text content with currently iterated item and append it to the <ul>.
+						.append($('<td>').text(product.name)) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
+						.append($('<td>').text(product.address)).append(
+								$('<td>').text(product.date)); // Create HTML <td> element, set its text content with price of currently iterated product and append it to the <tr>.
+
+					});
+				});
+				//});
+			});
+</script>
 </head>
 <body>
 	<div id="container">
@@ -97,7 +118,8 @@
 					<div class="tab_container">
 						<div style="display: none;" id="tab1" class="tab_content">
 							<h3>Our Plugins:</h3>
-
+						
+					    
 						</div>
 						<div style="display: none;" id="tab2" class="tab_content">
 							<h3>Please complete all the forms</h3>
