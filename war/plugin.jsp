@@ -17,6 +17,21 @@
 <script type="text/javascript" src="style/js/jquery-1.5.min.js"></script>
 <script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
 <script type="text/javascript" src="style/js/scripts.js"></script>
+
+<!-- STARS SCRIPTS -->
+<!--// documentation resources //-->
+	<script src='jquery.js' type="text/javascript"></script>
+	<script src='documentation/documentation.js' type="text/javascript"></script>
+ <link href='documentation/documentation.css' type="text/css" rel="stylesheet"/>
+ <!--// code-highlighting //-->
+	<script type="text/javaScript" src="documentation/chili/jquery.chili-2.0.js"></script> 
+	<!--//documentation/chili-toolbar/jquery.chili-toolbar.pack.js//-->
+ <script type="text/javascript">try{ChiliBook.recipeFolder="documentation/chili/"}catch(e){}</script>
+ <!--// plugin-specific resources //-->
+	<script src='jquery.MetaData.js' type="text/javascript" language="javascript"></script>
+ <script src='jquery.rating.js' type="text/javascript" language="javascript"></script>
+ <link href='jquery.rating.css' type="text/css" rel="stylesheet"/>
+ <!-- END OF STARS SCRIPTS -->
 <script type="text/javascript">
 	$(document).ready(
 			function() { // When the HTML DOM is ready loading, then execute the following function...
@@ -24,14 +39,15 @@
 				$.get('cardeckplatform_details', function(responseJson) { // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
 					var $table = $('<table></table>').appendTo($('#tab1')); // Create HTML <table> element and append it to HTML DOM element with ID "somediv".
 					$('<tr>').appendTo($table) // Create HTML <tr> element, set its text content with currently iterated item and append it to the <ul>.
-					.append($('<td>').text('Name:')) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
-					.append($('<td>').text('Link :')).append(
-							$('<td>').text('Date :'));
+					.append($('<td>').text('Details:')) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
+					.append($('<td>').text('Rank :'))
+					.append($('<td>').text('Link :'))
+					.append($('<td>').text('Date :'));
 					$.each(responseJson, function(index, product) { // Iterate over the JSON array.
 						$('<tr>').appendTo($table) // Create HTML <tr> element, set its text content with currently iterated item and append it to the <ul>.
 						.append($('<td>').text(product.name)) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
-						.append($('<td>').text(product.address)).append(
-								$('<td>').text(product.date)); // Create HTML <td> element, set its text content with price of currently iterated product and append it to the <tr>.
+						.append($('<td/>').append($('<a/>',{"href":product.address}).text('Download')))
+						.append($('<td>').text(product.date)); // Create HTML <td> element, set its text content with price of currently iterated product and append it to the <tr>.
 
 					});
 				});
@@ -102,18 +118,11 @@
 		<div id="wrapper">
 			<div class="content">
 				<div class="tabbed-content">
-					<h3>We love tabs</h3>
-					<p>Aenean fermentum luctus viverra. Pellentesque id lectus
-						ante, vel tristique elit. Fusce mattis, purus non consectetur
-						cursus, justo nisi viverra sem, ac lobortis ipsum sapien vel
-						purus. Vivamus aliquet gravida nibh sit amet accumsan. Fusce et
-						lorem nunc. Sed convallis, tortor nec ornare sagittis, velit
-						ligula varius sapien, eu cursus nisl purus sed felis habitant
-						morbi tristique senectus et netus et malesuada fames ac turpis.</p>
+					<h3>Here you can Download or Upload plugins :</h3>
 					<ul class="tabs">
 						<li><a href="#tab1">Download</a></li>
 						<li><a href="#tab2">Upload</a></li>
-						<li><a href="#tab3">Content</a></li>
+						<li><a href="#tab3">Other</a></li>
 					</ul>
 					<div class="tab_container">
 						<div style="display: none;" id="tab1" class="tab_content">
@@ -122,15 +131,19 @@
 					    
 						</div>
 						<div style="display: none;" id="tab2" class="tab_content">
-							<h3>Please complete all the forms</h3>
+							
 								<form action="<%= blobstoreService.createUploadUrl("/upload") %>" method="post" enctype="multipart/form-data">
+						            <h4>Details about the plugin</h2>
 						            <input type="text" name="Details">
+						            <br/>
+						            <h4>Please select you plugin file</h2>
 						            <input type="file" name="Plugin">
+						            <br/>
 						            <input type="submit" value="Submit">
 						        </form>
 						</div>
 						<div style="display: none;" id="tab3" class="tab_content">
-							<h3>Content</h3>
+							<h3>Other</h3>
 							<p>Nulla non tortor eget ligula dapibus semper non ut mauris.
 								Nam feugiat, lorem a tempus auctor, odio nisl porttitor lacus,
 								ut ultrices neque massa a odio. Pellentesque sit amet leo dictum
