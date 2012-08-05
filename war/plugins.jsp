@@ -18,6 +18,58 @@
 <script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
 <script type="text/javascript" src="style/js/scripts.js"></script>
 
+
+<script type="text/javascript">
+	$(document).ready(
+			function() { // When the HTML DOM is ready loading, then execute the following function...
+				//$('#somebutton').click(function() {                        // Locate HTML DOM element with ID "somebutton" and assign the following function to its "click" event...
+				$.get('cardeckplatform_details', function(responseJson) { // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
+					var $table = $('<table></table>').appendTo($('#tab1')); // Create HTML <table> element and append it to HTML DOM element with ID "somediv".
+					$('<tr>').appendTo($table) // Create HTML <tr> element, set its text content with currently iterated item and append it to the <ul>.
+					.append($('<td>').text('Details:')) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
+					.append($('<td>').text('Rank :'))
+					.append($('<td>').text('Link :'))
+					.append($('<td>').text('Date :'));
+					i=0;
+					$.each(responseJson, function(index, product) { // Iterate over the JSON array.
+						var element=document.createElement("input");
+						element.setAttribute("type", "radio");
+					    element.setAttribute("value", "radio");
+					    element.setAttribute("name", "radio"+i++);
+					    element.setAttribute("class", "star {split:2}");
+					    function makeRadio(container,checkedIndex,i)
+					    {
+					    	for (j=0;j<10;j=j+1)
+						    {
+						    	var e=document.createElement("input");
+						    	e.setAttribute("type", "radio");
+						    	e.setAttribute("value", "radio");
+						    	e.setAttribute("disabled", "disabled");
+						    	e.setAttribute("name"+i, "radio"+i++);
+						    	e.setAttribute("class", "star {split:2}");
+						    	if(j==checkedIndex)
+						    		e.setAttribute("checked", "checked");
+						    	container.append(e);
+						    }
+					    	
+					    	return container;
+					    }
+					    
+					    
+					    
+						$('<tr>').appendTo($table) // Create HTML <tr> element, set its text content with currently iterated item and append it to the <ul>.
+						.append($('<td>').text(product.name)) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
+						.append(makeRadio($('<td/>'),product.rank,i))
+						.append($('<td/>').append($('<a/>',{"href":product.address}).text('Download')))
+						.append($('<td>').text(product.date)); // Create HTML <td> element, set its text content with price of currently iterated product and append it to the <tr>.
+						i=i+1;
+						$('input[type=radio].star').rating();
+					});
+				});
+				
+				//});
+			});
+</script>
 <!-- STARS SCRIPTS -->
 <!--// documentation resources //-->
 	<script src='jquery.js' type="text/javascript"></script>
@@ -32,28 +84,6 @@
  <script src='jquery.rating.js' type="text/javascript" language="javascript"></script>
  <link href='jquery.rating.css' type="text/css" rel="stylesheet"/>
  <!-- END OF STARS SCRIPTS -->
-<script type="text/javascript">
-	$(document).ready(
-			function() { // When the HTML DOM is ready loading, then execute the following function...
-				//$('#somebutton').click(function() {                        // Locate HTML DOM element with ID "somebutton" and assign the following function to its "click" event...
-				$.get('cardeckplatform_details', function(responseJson) { // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
-					var $table = $('<table></table>').appendTo($('#tab1')); // Create HTML <table> element and append it to HTML DOM element with ID "somediv".
-					$('<tr>').appendTo($table) // Create HTML <tr> element, set its text content with currently iterated item and append it to the <ul>.
-					.append($('<td>').text('Details:')) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
-					.append($('<td>').text('Rank :'))
-					.append($('<td>').text('Link :'))
-					.append($('<td>').text('Date :'));
-					$.each(responseJson, function(index, product) { // Iterate over the JSON array.
-						$('<tr>').appendTo($table) // Create HTML <tr> element, set its text content with currently iterated item and append it to the <ul>.
-						.append($('<td>').text(product.name)) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
-						.append($('<td/>').append($('<a/>',{"href":product.address}).text('Download')))
-						.append($('<td>').text(product.date)); // Create HTML <td> element, set its text content with price of currently iterated product and append it to the <tr>.
-
-					});
-				});
-				//});
-			});
-</script>
 </head>
 <body>
 	<div id="container">
@@ -71,7 +101,8 @@
 					<div id="menu-wrapper">
 						<div id="smoothmenu1" class="ddsmoothmenu">
 							<ul>
-								<li><a href="index.html">Home</a>
+								<li><a href="index-4.html">Home</a>
+								<!-- 
 									<ul>
 										<li><a href="index.html">Home with Cycle</a></li>
 										<li><a href="index-2.html">Home with Columns</a></li>
@@ -92,8 +123,10 @@
 										<li><a href="portfolio-single.html">Single Portfolio
 												Post</a></li>
 									</ul></li>
+								 -->
 								<li><a href="services.html">Services</a></li>
-								<li><a href="page-tabs-toggle.html" class="selected">Features</a>
+								<li><a href="plugins.jsp" class="selected">Plugins</a>
+								<!-- 
 									<ul>
 										<li><a href="page-tabs-toggle.html">Tabs &amp; Toggle</a></li>
 										<li><a href="page-carousel.html">Carousel</a></li>
@@ -103,6 +136,7 @@
 										<li><a href="page-buttons.html">Buttons</a></li>
 										<li><a href="styles.html">Columns &amp; Tables</a></li>
 									</ul></li>
+								 -->
 								<li><a href="contact.html">Contact</a></li>
 							</ul>
 						</div>
@@ -127,11 +161,10 @@
 					<div class="tab_container">
 						<div style="display: none;" id="tab1" class="tab_content">
 							<h3>Our Plugins:</h3>
-						
 					    
 						</div>
 						<div style="display: none;" id="tab2" class="tab_content">
-							
+								
 								<form action="<%= blobstoreService.createUploadUrl("/upload") %>" method="post" enctype="multipart/form-data">
 						            <h4>Details about the plugin</h2>
 						            <input type="text" name="Details">
@@ -179,7 +212,7 @@
 
 				<!-- Begin Copyright -->
 				<div id="copyright">
-					<p>ï¿½ Copyright 2011 Delphic | Creative Portfolio Template</p>
+					<p>© Copyright 2011 Card-Deck-Platform</p>
 				</div>
 				<!-- End Copyright -->
 

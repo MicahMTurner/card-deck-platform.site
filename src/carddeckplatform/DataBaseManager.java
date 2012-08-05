@@ -36,13 +36,16 @@ public class DataBaseManager {
 			for (String property : entity.getProperties().keySet()) {
 				System.out.println(property);
 			}
-			
 			Entity datastoreentity;
 			Key detailKey = KeyFactory.createKey("pluginDetails",entity.getKey().getName());
 			String detail=null;
+			Long numOfVotes=(long) 0;
+			Long sum=(long) 0;
 			try {
 				Entity entDetail=datastore.get(detailKey);
 				detail=(String) entDetail.getProperty("Details");
+				sum=(Long) entDetail.getProperty("Sum");
+				numOfVotes=(Long) entDetail.getProperty("NumOfVotes");
 			} catch (EntityNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -60,7 +63,8 @@ public class DataBaseManager {
 			System.out.println(entity.getProperty("filename"));
 			System.out.println(entity.getProperty("creation"));
 			System.out.println(entity.getKey().getName());
-			plugins.add(new PluginDetails(detail, entity.getProperty("creation").toString(), "/serve?blob-key="+entity.getKey().getName()));
+			plugins.add(new PluginDetails(detail, entity.getProperty("creation").toString(), "/serve?blob-key="+entity.getKey().getName(), sum, numOfVotes));
+			
 		}
 
 		

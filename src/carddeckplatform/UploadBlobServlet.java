@@ -39,6 +39,9 @@ public class UploadBlobServlet extends HttpServlet {
 					//storing the details at datastore
 					Entity pluginDetail = new Entity("pluginDetails", blobKey.getKeyString());
 					pluginDetail.setProperty("Details", req.getParameter("Details"));
+					pluginDetail.setProperty("Sum", 5);
+					pluginDetail.setProperty("NumOfVotes",1);
+					
 					datastore.put(pluginDetail);
 
 					//response

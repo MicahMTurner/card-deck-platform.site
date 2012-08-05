@@ -4,11 +4,20 @@ public class PluginDetails {
 	public String name;
 	public String date;
 	public String address;
-	public PluginDetails(String name, String date, String address) {
+	int rank;
+	long sum;
+	long numOfvotes;
+	
+	public PluginDetails(String name, String date, String address, long sum,
+			long numOfvotes) {
 		super();
 		this.name = name;
 		this.date = date;
 		this.address = address;
+		this.sum = sum;
+		this.numOfvotes = numOfvotes;
+		System.out.println((double)sum/(numOfvotes*10));
+		this.rank=(int) Math.round((double)sum/(numOfvotes*10)*10)-1;
 	}
 	public String getName() {
 		return name;
