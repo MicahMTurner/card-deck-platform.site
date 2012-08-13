@@ -23,19 +23,14 @@ public class DataBaseManager {
 		
 		Query query = new Query("__BlobInfo__");
 		PreparedQuery pq = datastore.prepare(query);
-		System.out.println(pq.countEntities(FetchOptions.Builder.withLimit(100).offset(0)));
 		List<Entity> entList = pq.asList(FetchOptions.Builder.withLimit(100).offset(0));
 		
 		query = new Query("pluginDetails");
 		pq = datastore.prepare(query);
 		List<Entity> detailList = pq.asList(FetchOptions.Builder.withLimit(100).offset(0));
 		
-		System.out.println("Keys:");
 		if(entList!=null)
 		for (Entity entity : entList) {
-			for (String property : entity.getProperties().keySet()) {
-				System.out.println(property);
-			}
 			Entity datastoreentity;
 			Key detailKey = KeyFactory.createKey("pluginDetails",entity.getKey().getName());
 			String detail=null;
@@ -59,11 +54,8 @@ public class DataBaseManager {
 //				// TODO Auto-generated catch block
 //				e.printStackTrace();
 //			}
-			System.out.println(detail);
-			System.out.println(entity.getProperty("filename"));
-			System.out.println(entity.getProperty("creation"));
-			System.out.println(entity.getKey().getName());
-			plugins.add(new PluginDetails(detail, entity.getProperty("creation").toString(), "/serve?blob-key="+entity.getKey().getName(), sum, numOfVotes));
+			Long size=(Long)entity.getProperty("size");
+			plugins.add(new PluginDetails(detail, entity.getProperty("creation").toString(), "/serve?blob-key="+entity.getKey().getName(), sum, numOfVotes,size));
 			
 		}
 

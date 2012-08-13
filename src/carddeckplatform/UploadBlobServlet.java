@@ -23,7 +23,6 @@ public class UploadBlobServlet extends HttpServlet {
 
 	public void doPost(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
-		System.out.println(req.getParameter("Details"));
 		// Map<String, BlobKey> blobs = blobstoreService.getUploadedBlobs(req);
 		Map<String, List<BlobKey>> blobs = blobstoreService.getUploads(req);
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
