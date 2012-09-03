@@ -58,7 +58,7 @@
 					    
 					    
 						$('<tr>').appendTo($table) // Create HTML <tr> element, set its text content with currently iterated item and append it to the <ul>.
-						.append($('<td>').text(product.name)) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
+						.append($('<td>').text(product.detail)) // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
 						.append(makeRadio($('<td/>'),product.rank,i))
 						.append($('<td/>').append($('<a/>',{"href":product.address}).text('Download')))
 						.append($('<td>').text(product.date)); // Create HTML <td> element, set its text content with price of currently iterated product and append it to the <tr>.
@@ -101,7 +101,7 @@
 					<div id="menu-wrapper">
 						<div id="smoothmenu1" class="ddsmoothmenu">
 							<ul>
-								<li><a href="index-4.html">Home</a>
+								<li><a href="index.html">Home</a>
 								<!-- 
 									<ul>
 										<li><a href="index.html">Home with Cycle</a></li>
@@ -124,6 +124,17 @@
 												Post</a></li>
 									</ul></li>
 								 -->
+                                 </li>
+                                   <li><a href="downloads.html">Downloads</a> 
+                                    <!--
+                                  <ul>
+                                    <li><a href="index.html">Home with Cycle</a></li>
+                                    <li><a href="index-2.html">Home with Columns</a></li>
+                                    <li><a href="index-3.html">Home with Services</a></li>
+                                    <li><a href="index-4.html">Home with Piecemaker</a></li>
+                                  </ul>
+                                  --> 
+                                  </li>
 								<li><a href="services.html">Services</a></li>
 								<li><a href="plugins.jsp" class="selected">Plugins</a>
 								<!-- 
@@ -212,7 +223,7 @@
 
 				<!-- Begin Copyright -->
 				<div id="copyright">
-					<p>© Copyright 2011 Card-Deck-Platform</p>
+					<p>ï¿½ Copyright 2011 Card-Deck-Platform</p>
 				</div>
 				<!-- End Copyright -->
 

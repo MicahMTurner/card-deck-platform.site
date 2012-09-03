@@ -55,7 +55,8 @@ public class DataBaseManager {
 //				e.printStackTrace();
 //			}
 			Long size=(Long)entity.getProperty("size");
-			plugins.add(new PluginDetails(detail, entity.getProperty("creation").toString(), "/serve?blob-key="+entity.getKey().getName(), sum, numOfVotes,size));
+			String filename=(String) entity.getProperty("filename");
+			plugins.add(new PluginDetails(detail, entity.getProperty("creation").toString(), "/serve?blob-key="+entity.getKey().getName(), sum, numOfVotes,size,filename));
 			
 		}
 
