@@ -73,7 +73,7 @@ public class UploadBlobServlet extends HttpServlet {
 						out.println("</script>");
 						
 					}
-					res.sendRedirect("/");
+					res.sendRedirect("/plugins.jsp");
 				}
 			}
 	}

@@ -70,6 +70,33 @@
 				//});
 			});
 </script>
+
+<script type="text/javascript">
+var hash = {
+		  '.jar'  : 1,
+		  
+		};
+
+		function check_extension(filename) {
+				var submitId="submit";
+		      var re = /\..+$/;
+		      var ext = filename.match(re);
+		      var submitEl = document.getElementById(submitId);
+		      if (hash[ext]) {
+		        submitEl.disabled = false;
+		        return true;
+		      } else {
+		        alert("Invalid filename, please select another file");
+		        submitEl.disabled = true;
+
+		        return false;
+		      }
+		}
+
+
+
+
+</script>
 <!-- STARS SCRIPTS -->
 <!--// documentation resources //-->
 	<script src='jquery.js' type="text/javascript"></script>
@@ -181,9 +208,9 @@
 						            <input type="text" name="Details">
 						            <br/>
 						            <h4>Please select you plugin file</h2>
-						            <input type="file" name="Plugin">
+						            <input type="file" name="Plugin" accept="application/java-archive" onchange="check_extension(this.value);">
 						            <br/>
-						            <input type="submit" value="Submit">
+						            <input type="submit" value="Submit" id="submit" disabled="disabled">
 						        </form>
 						</div>
 						<div style="display: none;" id="tab3" class="tab_content">
