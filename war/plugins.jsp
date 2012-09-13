@@ -163,7 +163,8 @@ var hash = {
                                   --> 
                                   </li>
 								<li><a href="services.html">Services</a></li>
-								<li><a href="plugins.jsp" class="selected">Plugins</a>
+                                <li><a href="Developer.html">Developer</a></li>
+								<li><a href="plugins.jsp" class="selected">Market</a>
 								<!-- 
 									<ul>
 										<li><a href="page-tabs-toggle.html">Tabs &amp; Toggle</a></li>
