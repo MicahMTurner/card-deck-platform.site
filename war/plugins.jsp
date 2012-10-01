@@ -128,56 +128,62 @@ var hash = {
 					<div id="menu-wrapper">
 						<div id="smoothmenu1" class="ddsmoothmenu">
 							<ul>
-								<li><a href="index.html">Home</a>
-								<!-- 
-									<ul>
-										<li><a href="index.html">Home with Cycle</a></li>
-										<li><a href="index-2.html">Home with Columns</a></li>
-										<li><a href="index-3.html">Home with Services</a></li>
-										<li><a href="index-4.html">Home with Piecemaker</a></li>
-									</ul></li>
-								<li><a href="blog-1.html">Blog</a>
-									<ul>
-										<li><a href="blog-1.html">Blog</a></li>
-										<li><a href="blog-2.html">News</a></li>
-										<li><a href="blog-single.html">Single Blog Post</a></li>
-									</ul></li>
-								<li><a href="portfolio-1.html">Portfolio</a>
-									<ul>
-										<li><a href="portfolio-1.html">Portfolio with
-												Lightbox</a></li>
-										<li><a href="portfolio-2.html">Portfolio with Details</a></li>
-										<li><a href="portfolio-single.html">Single Portfolio
-												Post</a></li>
-									</ul></li>
-								 -->
-                                 </li>
-                                   <li><a href="downloads.html">Downloads</a> 
-                                    <!--
-                                  <ul>
-                                    <li><a href="index.html">Home with Cycle</a></li>
-                                    <li><a href="index-2.html">Home with Columns</a></li>
-                                    <li><a href="index-3.html">Home with Services</a></li>
-                                    <li><a href="index-4.html">Home with Piecemaker</a></li>
-                                  </ul>
-                                  --> 
-                                  </li>
-								<li><a href="services.html">Services</a></li>
-                                <li><a href="Developer.html">Developer</a></li>
-								<li><a href="plugins.jsp" class="selected">Market</a>
-								<!-- 
-									<ul>
-										<li><a href="page-tabs-toggle.html">Tabs &amp; Toggle</a></li>
-										<li><a href="page-carousel.html">Carousel</a></li>
-										<li><a href="blog-2.html">News</a></li>
-										<li><a href="services.html">Services</a></li>
-										<li><a href="page-custom.html">Custom Page</a></li>
-										<li><a href="page-buttons.html">Buttons</a></li>
-										<li><a href="styles.html">Columns &amp; Tables</a></li>
-									</ul></li>
-								 -->
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
+            <li><a href="index.html"  >Home</a>
+              <!-- <ul>
+                <li><a href="index.html">Home with Cycle</a></li>
+                <li><a href="index-2.html">Home with Columns</a></li>
+                <li><a href="index-3.html">Home with Services</a></li>
+                <li><a href="index-4.html">Home with Piecemaker</a></li>
+              </ul>
+              -->
+            </li>
+            <li><a href="plugins.jsp" class="selected">Market</a></li>
+            <li><a href="Developer.html" >Developer</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="downloads.html">Downloads</a>
+                <!--
+              <ul>
+                <li><a href="index.html">Home with Cycle</a></li>
+                <li><a href="index-2.html">Home with Columns</a></li>
+                <li><a href="index-3.html">Home with Services</a></li>
+                <li><a href="index-4.html">Home with Piecemaker</a></li>
+              </ul>
+              --> 
+              </li>
+            <!--
+            <li><a href="blog-1.html">Blog</a>
+              <ul>
+                <li><a href="blog-1.html">Blog</a></li>
+                <li><a href="blog-2.html">News</a></li>
+                <li><a href="blog-single.html">Single Blog Post</a></li>
+              </ul>
+            </li>
+            <li><a href="portfolio-1.html">Portfolio</a>
+              <ul>
+                <li><a href="portfolio-1.html">Portfolio with Lightbox</a></li>
+                <li><a href="portfolio-2.html">Portfolio with Details</a></li>
+                <li><a href="portfolio-single.html">Single Portfolio Post</a></li>
+              </ul>
+            </li>
+            -->
+            
+             
+			  
+            <!--
+            <li><a href="page-tabs-toggle.html">Features</a>
+              <ul>
+                <li><a href="page-tabs-toggle.html">Tabs &amp; Toggle</a></li>
+                <li><a href="page-carousel.html">Carousel</a></li>
+                <li><a href="blog-2.html">News</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="page-custom.html">Custom Page</a></li>
+                <li><a href="page-buttons.html">Buttons</a></li>
+                <li><a href="styles.html">Columns &amp; Tables</a></li>
+              </ul>
+            </li>
+            -->
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
 						</div>
 					</div>
 					<!-- End Menu -->

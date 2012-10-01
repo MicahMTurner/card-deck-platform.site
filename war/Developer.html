@@ -27,7 +27,19 @@
         <div id="menu-wrapper">
           <div id="smoothmenu1" class="ddsmoothmenu">
             <ul>
-              <li><a href="index.html">Home</a> 
+            <li><a href="index.html"  >Home</a>
+              <!-- <ul>
+                <li><a href="index.html">Home with Cycle</a></li>
+                <li><a href="index-2.html">Home with Columns</a></li>
+                <li><a href="index-3.html">Home with Services</a></li>
+                <li><a href="index-4.html">Home with Piecemaker</a></li>
+              </ul>
+              -->
+            </li>
+            <li><a href="plugins.jsp">Market</a></li>
+            <li><a href="Developer.html" class="selected">Developer</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="downloads.html">Downloads</a>
                 <!--
               <ul>
                 <li><a href="index.html">Home with Cycle</a></li>
@@ -37,17 +49,7 @@
               </ul>
               --> 
               </li>
-              <li><a href="downloads.html">Downloads</a> 
-                <!--
-              <ul>
-                <li><a href="index.html">Home with Cycle</a></li>
-                <li><a href="index-2.html">Home with Columns</a></li>
-                <li><a href="index-3.html">Home with Services</a></li>
-                <li><a href="index-4.html">Home with Piecemaker</a></li>
-              </ul>
-              --> 
-              </li>
-              <!--
+            <!--
             <li><a href="blog-1.html">Blog</a>
               <ul>
                 <li><a href="blog-1.html">Blog</a></li>
@@ -63,10 +65,10 @@
               </ul>
             </li>
             -->
-              <li><a href="services.html" >Services</a></li>
-              <li><a href="Developer.html" class="selected">Developer</a></li>
-              <li><a href="plugins.jsp">Market</a></li>
-              <!--
+            
+             
+			  
+            <!--
             <li><a href="page-tabs-toggle.html">Features</a>
               <ul>
                 <li><a href="page-tabs-toggle.html">Tabs &amp; Toggle</a></li>
@@ -79,8 +81,8 @@
               </ul>
             </li>
             -->
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
           </div>
         </div>
         <!-- End Menu --> 
@@ -94,29 +96,97 @@
   <div id="wrapper">
     <div class="tab-wrapper">
       <ul id="tab-menu">
-        <li class="selected"><!--<img src="style/images/icon-palette.png" alt="" />-->Upload Plugin</li>
-        <li><!--<img src="style/images/icon-art.png" alt="" />-->Download Plugin</li>
-        <!--<li><!--<img src="style/images/icon-laptop.png" alt="" /> Download</li>-->
+      	<li class="selected"><!--<img src="style/images/icon-palette.png" alt="" />-->Quiq Start</li>
+        <li ><!--<img src="style/images/icon-palette.png" alt="" />-->Upload Plugin</li>
         
-        <li><!--<img src="style/images/icon-camera.png" alt="" />-->Rate Plugin</li>
-                <li><!--<img src="style/images/icon-camera.png" alt="" />-->References</li>
+        <li><!--<img src="style/images/icon-camera.png" alt="" />-->Create Plugin Tutorial</li>
+
+
+        <li><!--<img src="style/images/icon-camera.png" alt="" />-->References</li>
+        <li><!--<img src="style/images/icon-camera.png" alt="" />-->Sources</li>
+        <li><!--<img src="style/images/icon-camera.png" alt="" />--><a href="doc/doc/index.html">Java Doc</a></li>
+
         
       </ul>
       <div class="tab-content">
-        <div class="tab show">
+      <div class="tab show">
+          <h3>Quick Start :</h3>
+          <p>when creating a new game, beofre writing your own logic you need to create
+the following classes:
+<ul>
+        <li>a class that extends Game class</li>
+        <li>player handler that extends PlayerEventsHandler</li>
+        <li>public handler that extends PublicEventsHandler</li>
+        <li>card handler that extends CardEventsHandler</li>
+      </ul>
+
+
+That's it! easy as 1,2,3.. 
+now you are ready to fill in your logic in the handlers. 
+for more advanced options please read the <a href="doc/doc/index.html">JavaDoc</a> and see our war game tutorial at "Create Plugin Tutorial" tab.</p>
+         
+         
+        </div>
+        <div class="tab">
           <h3>Upload Plugin :</h3>
          <iframe width="560" height="315" src="http://www.youtube.com/embed/4QbuXOXEbHs" frameborder="0" allowfullscreen></iframe>
         </div>
         
+        
         <div class="tab">
-                  <h3>Download Plugin :</h3>
-                  <iframe width="420" height="315" src="http://www.youtube.com/embed/aPNRkLCJ0cg" frameborder="0" allowfullscreen></iframe>
-                  <br/>
-                  <h4>Notification :</h4><p>The plugin could be downloaded manually from the site and uploaded to the sd card</p>
-          </div>
-        <div class="tab">
-          <h3>Rate Plugin :</h3>
-          <iframe width="420" height="315" src="http://www.youtube.com/embed/4ebkJzwl47c" frameborder="0" allowfullscreen></iframe>
+        	<div class="content">
+				<div class="tabbed-content">
+					<h3>Create Plugin Tutorial</h3>
+					<ul class="tabs">
+						<li><a href="#tab1">War example</a></li>
+						<li><a href="#tab2">.jar conversion</a></li>
+                        <li><a href="#tab3">info.xml</a></li>
+						
+					</ul>
+					<div class="tab_container">
+						<div style="display: none;" id="tab1" class="tab_content">
+							<p>Source Code :<a href="War.rar">download</a></p>
+                              <iframe width="560" height="315" src="http://www.youtube.com/embed/c1692gT0YDE" frameborder="0" allowfullscreen></iframe>
+                              <iframe width="560" height="315" src="http://www.youtube.com/embed/N3e2ll-Y1YA" frameborder="0" allowfullscreen></iframe>
+                              <iframe width="560" height="315" src="http://www.youtube.com/embed/kocOSQXRfR8" frameborder="0" allowfullscreen></iframe>
+					    
+						</div>
+						<div style="display: none;" id="tab2" class="tab_content">
+								<p>
+                                Since android has it's own VM, before you can use your exported ".jar" file you need to convert it to android's format (Dalvik VM).<br/>
+                                    for that you need to perform the following steps:<br/>
+                                    open the command line/terminal and browse to the following path: Android\android-sdk\platform-tools.<br/>
+                                    there insert the following command: <br/>
+                                    dx --dex --keep-classes --output= &lt;path+destination&gt; &lt;path+src&gt;.<br/>
+                                    for example:<br/>
+                                    dx --dex --keep-classes --output= c:\converted\war.jar c:\myGame\war.jar<br/>
+                                </p>
+								
+						</div>
+                        <div style="display: none;" id="tab3" class="tab_content">
+								<p>
+                                when creating a game, make sure to add an xml file named "info.xml" (case sensitive), under "src" dir, with the following 			
+                                format:<br/>
+                    			<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;?xml version="1.0" encoding="UTF-8"?&gt
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;Game&gt;<br/>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;classPath&gt;war.War&lt;/classPath&gt;<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/Game&gt;<br/>
+                                <br/>
+                                where classPath is the path of the class that extends "Game".<br/>
+                                in this example we got a package named war and in it we have the "War" class that extends "Game".<br/>
+                                </p>
+                                <p>Xml Example :<a href="info.xml">download</a></p>
+								
+						</div>
+						
+					</div>
+                    
+                    
+				</div>
+			</div>
+        
+          
       
         </div>
         <div class="tab">
@@ -124,10 +194,47 @@
           
 			
       		<ul>
-            <li><a href="doc/doc/index.html"><h4>JavaDoc </h4> </a></li>
+            
             <li><a href="http://code.google.com/p/card-deck-platform/"><h4>Project Code Site </h4> </a></li>
             <li><h4>QR Code :</h4><img src="QR.png" alt="QR" /></li>
           </ul>
+        </div>
+         <div class="tab">
+          <h3>Sources :</h3>
+          
+			<h4>Games :</h4>
+      		<table cellspacing="0" cellpadding="0">
+              <tr>
+                <th>Game</th>
+                
+                <th class="center">Link</th>
+              </tr>
+              
+              <tr class="even">
+                <td>Durak</td>
+                <td class="center"><a href="Durak.rar">Click to download</a> </td>
+              </tr>
+                            <tr class="even">
+                <td>War</td>
+                <td class="center"><a href="War.rar">Click to download</a> </td>
+              </tr>
+              
+            </table>
+            <br/><br/>
+            
+            			<h4>Platform :</h4>
+      		<table cellspacing="0" cellpadding="0">
+              <tr>
+                <th>Platform Version</th>
+                
+                <th class="center">Link</th>
+              </tr>
+              
+              <tr class="even">
+                <td>Platform V1</td>
+                <td class="center"><a href="Durak.rar">Click to download</a> </td>
+              </tr>
+            </table>
         </div>
       </div>
     </div>

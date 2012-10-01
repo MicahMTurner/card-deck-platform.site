@@ -2102,3 +2102,18 @@ h2.trigger:hover {
 .d-carousel .jcarousel-prev-horizontal:hover {
 	background-position: bottom left;
 }
+.promo-wrapper {
+	background-attachment: scroll;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+.promo-video {
+	background-color: #ccc;
+	margin: 1em;
+	padding: 3em;	
+}
+.promo-video {
+	background-image: url(promo-background.gif);
+}
