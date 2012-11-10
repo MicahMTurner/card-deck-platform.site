@@ -119,6 +119,9 @@ var hash = {
 			<div id="header-wrapper">
 				<!-- Begin Header -->
 				<div id="header">
+                <div class="google-play">
+      <a href="https://play.google.com/store/apps/details?id=carddeckplatform.game&feature=search_result#?t=W251bGwsMSwxLDEsImNhcmRkZWNrcGxhdGZvcm0uZ2FtZSJd"><img src="get_it_on_play_logo_large.png" /></a>
+      </div>
 					<div id="logo">
 						<a href="index.html"><img src="style/images/logo.png"
 							alt="Delphic" /></a>
@@ -201,7 +204,7 @@ var hash = {
 					<ul class="tabs">
 						<li><a href="#tab1">Download</a></li>
 						<li><a href="#tab2">Upload</a></li>
-						<li><a href="#tab3">Other</a></li>
+						
 					</ul>
 					<div class="tab_container">
 						<div style="display: none;" id="tab1" class="tab_content">
@@ -220,26 +223,7 @@ var hash = {
 						            <input type="submit" value="Submit" id="submit" disabled="disabled">
 						        </form>
 						</div>
-						<div style="display: none;" id="tab3" class="tab_content">
-							<h3>Other</h3>
-							<p>Nulla non tortor eget ligula dapibus semper non ut mauris.
-								Nam feugiat, lorem a tempus auctor, odio nisl porttitor lacus,
-								ut ultrices neque massa a odio. Pellentesque sit amet leo dictum
-								nisl tempor malesuada id ut magna. Etiam non mauris eget massa
-								sagittis euismod. Aliquam lectus nulla, consequat eget molestie
-								id, malesuada sit amet lectus. Pellentesque eget justo sit amet
-								nunc adipiscing semper at ac quam. Praesent a volutpat nulla.
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<p>Morbi congue pellentesque quam, eu ultricies. Pellentesque
-								habitant morbi tristique senectus et netus et malesuada fames ac
-								turpis egestas. Nulla facilisi. Class aptent taciti sociosqu ad
-								litora torquent per conubia nostra, per inceptos himenaeos. Nunc
-								rhoncus tortor quis eros bibendum a tempus est dapibus. Vivamus
-								consectetur quam eu tellus porttitor ultrices. Nunc metus massa,
-								ullamcorper sit amet malesuada a, porttitor in tellus.
-								Vestibulum ullamcorper quam nec lorem aliquam id feugiat risus
-								tincidunt.</p>
-						</div>
+						
 					</div>
 				</div>
 			</div>

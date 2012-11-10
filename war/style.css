@@ -2117,3 +2117,11 @@ h2.trigger:hover {
 .promo-video {
 	background-image: url(promo-background.gif);
 }
+.google-play {
+	float: left;
+	position: absolute;
+	bottom: 0px;
+	left: -200px;
+	width: 50px;
+	
+}
